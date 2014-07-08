@@ -1,0 +1,23 @@
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//
+//		LibPR : library for classification
+//
+//			xxx-1.private.h : for function1
+//
+//			main coder: Y. Masutani
+//
+//			update history
+//
+//			2007.05.02	start coding
+//			2007.05.03	bug fixed for zzz
+//
+//
+////////////////////////////////////////////////////////////////////////////////////////
+
+//#pragma warning(disable: 4996)
+
+#include <cstdio>
+#include <cstdlib>
+#include "../LibPR.h"
+
