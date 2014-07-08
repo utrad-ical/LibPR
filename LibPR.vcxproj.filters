@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4aa4d2a9-fa2e-444f-ba4b-b2739df9891b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\prFeatTag">
+      <UniqueIdentifier>{30e19979-807d-4b83-b2c5-8b84518e196d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prCaseDataIO">
+      <UniqueIdentifier>{ddebae30-45a7-49e5-afa3-34eafcd15359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prCandDataSet">
+      <UniqueIdentifier>{153072d1-e056-47bf-b4b9-a269239fed7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prMatrixTools">
+      <UniqueIdentifier>{e3f30bc8-6087-4139-a6e1-d55690795593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prSortTools">
+      <UniqueIdentifier>{3e427b31-1e56-49c2-bac0-a930165f1b4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prListEnsemble">
+      <UniqueIdentifier>{f7899fbc-d1ce-40bd-a8d2-f5d30bb14db2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prErrorMessage">
+      <UniqueIdentifier>{0cbf8fe3-bf5d-44b6-aa41-2e8315232fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prErrorOfClassifier">
+      <UniqueIdentifier>{792f91b9-0a22-499d-8395-d461376ccd42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prRealAdaBoost">
+      <UniqueIdentifier>{a654035d-b83a-4717-8b43-a0f7eaa94d01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prStatistics">
+      <UniqueIdentifier>{69f3f5fd-2ae5-44df-af8b-c56b043f63ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prEvaluation">
+      <UniqueIdentifier>{8033d476-a8d6-4972-bd1c-b3ec7076c504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prMahalanobis">
+      <UniqueIdentifier>{9051cf90-d3dc-4dc8-b8d1-a425ad6e3be3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prUBoost">
+      <UniqueIdentifier>{b4509889-b76f-4d2f-b64f-1f76c3104b6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prThresholdingForFeats">
+      <UniqueIdentifier>{cffed582-172c-4208-9aca-138eadc59362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prTableInputFile">
+      <UniqueIdentifier>{1810198d-5643-4c17-97d1-66242ecf8b9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prHistogram">
+      <UniqueIdentifier>{9b54439a-122f-4583-8246-92fde801f3dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prKernelLDA">
+      <UniqueIdentifier>{1e12d7ae-7292-497d-a708-2300c88ffc5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prKernels">
+      <UniqueIdentifier>{82fca21f-ddac-479f-bf7a-845f89c1cf1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prPCA">
+      <UniqueIdentifier>{da4d65b7-52cc-42fa-81ba-8a55d1a7367e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prBoostEnsemblePrimitive">
+      <UniqueIdentifier>{a14bc0c3-2e55-431f-be6f-ccff0b6f3c88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{5183b617-1d16-4e4c-8098-66c62e6cd336}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="NR2.0ANSI_f64">
+      <UniqueIdentifier>{8e5168a4-3dc5-40b7-8e70-f8d9054173fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\prIsomap">
+      <UniqueIdentifier>{125bac94-f492-4031-9263-f65b9db78e58}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\LibPR\GetLapTime.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prFeatTag.cpp">
+      <Filter>ソース ファイル\prFeatTag</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prCaseDataIO.cpp">
+      <Filter>ソース ファイル\prCaseDataIO</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prCandDataSet.cpp">
+      <Filter>ソース ファイル\prCandDataSet</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prFeatureData_temp.cpp">
+      <Filter>ソース ファイル\prCandDataSet</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prMatrixTools.cpp">
+      <Filter>ソース ファイル\prMatrixTools</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prSortTools.cpp">
+      <Filter>ソース ファイル\prSortTools</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prListEnsemble.cpp">
+      <Filter>ソース ファイル\prListEnsemble</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prErrorMessage.cpp">
+      <Filter>ソース ファイル\prErrorMessage</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prErrorOfClassifier.cpp">
+      <Filter>ソース ファイル\prErrorOfClassifier</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prRealAdaBoost.cpp">
+      <Filter>ソース ファイル\prRealAdaBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prStatistics.cpp">
+      <Filter>ソース ファイル\prStatistics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prEvaluation.cpp">
+      <Filter>ソース ファイル\prEvaluation</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prMahalanobis.cpp">
+      <Filter>ソース ファイル\prMahalanobis</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prMahalanobis_temp.cpp">
+      <Filter>ソース ファイル\prMahalanobis</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prUBoost.cpp">
+      <Filter>ソース ファイル\prUBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prUBoostMT.cpp">
+      <Filter>ソース ファイル\prUBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prThresholdingForFeats.cpp">
+      <Filter>ソース ファイル\prThresholdingForFeats</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prTableInputFile.cpp">
+      <Filter>ソース ファイル\prTableInputFile</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prHistogram.cpp">
+      <Filter>ソース ファイル\prHistogram</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prKernelLDA.cpp">
+      <Filter>ソース ファイル\prKernelLDA</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prKernelMethodTools.cpp">
+      <Filter>ソース ファイル\prKernels</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prPCA.cpp">
+      <Filter>ソース ファイル\prPCA</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prBoostEnsemblePrimitive.cpp">
+      <Filter>ソース ファイル\prBoostEnsemblePrimitive</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_balanc.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_elmhes.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_gaussj.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_hqr.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_jacobi.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_lubksb.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_ludcmp.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_others\f64_nrutil.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_pythag.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_tqli.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="NR2.0ANSI_v2.06_double\C_recipes\f64_tred2.c">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prIsomap.cpp">
+      <Filter>ソース ファイル\prIsomap</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LibPR\prBoostEnsemblePrimitiveMT.cpp">
+      <Filter>ソース ファイル\prBoostEnsemblePrimitive</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\LibPR\GetLapTime.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prFeatTag.h">
+      <Filter>ソース ファイル\prFeatTag</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prFeatTag.private.h">
+      <Filter>ソース ファイル\prFeatTag</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prCaseDataIO.h">
+      <Filter>ソース ファイル\prCaseDataIO</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prCaseDataIO.private.h">
+      <Filter>ソース ファイル\prCaseDataIO</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prCandDataSet.h">
+      <Filter>ソース ファイル\prCandDataSet</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prCandDataSet.private.h">
+      <Filter>ソース ファイル\prCandDataSet</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prFeatureData_temp.h">
+      <Filter>ソース ファイル\prCandDataSet</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prFeatureData_temp.private.h">
+      <Filter>ソース ファイル\prCandDataSet</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prMatrixTools.h">
+      <Filter>ソース ファイル\prMatrixTools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prMatrixTools.private.h">
+      <Filter>ソース ファイル\prMatrixTools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prSortTools.h">
+      <Filter>ソース ファイル\prSortTools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prSortTools.private.h">
+      <Filter>ソース ファイル\prSortTools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prListEnsemble.h">
+      <Filter>ソース ファイル\prListEnsemble</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prListEnsemble.private.h">
+      <Filter>ソース ファイル\prListEnsemble</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prErrorMessage.h">
+      <Filter>ソース ファイル\prErrorMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prErrorMessage.private.h">
+      <Filter>ソース ファイル\prErrorMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prErrorOfClassifier.h">
+      <Filter>ソース ファイル\prErrorOfClassifier</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prErrorOfClassifier.private.h">
+      <Filter>ソース ファイル\prErrorOfClassifier</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prRealAdaBoost.h">
+      <Filter>ソース ファイル\prRealAdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prRealAdaBoost.private.h">
+      <Filter>ソース ファイル\prRealAdaBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prStatistics.h">
+      <Filter>ソース ファイル\prStatistics</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prStatistics.private.h">
+      <Filter>ソース ファイル\prStatistics</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prEvaluation.h">
+      <Filter>ソース ファイル\prEvaluation</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prEvaluation.private.h">
+      <Filter>ソース ファイル\prEvaluation</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prMahalanobis.h">
+      <Filter>ソース ファイル\prMahalanobis</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prMahalanobis.private.h">
+      <Filter>ソース ファイル\prMahalanobis</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prMahalanobis_temp.h">
+      <Filter>ソース ファイル\prMahalanobis</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prMahalanobis_temp.private.h">
+      <Filter>ソース ファイル\prMahalanobis</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prUBoost.h">
+      <Filter>ソース ファイル\prUBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prUBoost.private.h">
+      <Filter>ソース ファイル\prUBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prUBoostMT.h">
+      <Filter>ソース ファイル\prUBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prThresholdingForFeats.h">
+      <Filter>ソース ファイル\prThresholdingForFeats</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prThresholdingForFeats.private.h">
+      <Filter>ソース ファイル\prThresholdingForFeats</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prTableInputFile.h">
+      <Filter>ソース ファイル\prTableInputFile</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prTableInputFile.private.h">
+      <Filter>ソース ファイル\prTableInputFile</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prHistogram.h">
+      <Filter>ソース ファイル\prHistogram</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prHistogram.private.h">
+      <Filter>ソース ファイル\prHistogram</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prKernelLDA.h">
+      <Filter>ソース ファイル\prKernelLDA</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prKernelLDA.private.h">
+      <Filter>ソース ファイル\prKernelLDA</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prKernelMethodTools.h">
+      <Filter>ソース ファイル\prKernels</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prKernelMethodTools.private.h">
+      <Filter>ソース ファイル\prKernels</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prPCA.h">
+      <Filter>ソース ファイル\prPCA</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prPCA.private.h">
+      <Filter>ソース ファイル\prPCA</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prBoostEnsemblePrimitive.h">
+      <Filter>ソース ファイル\prBoostEnsemblePrimitive</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prBoostEnsemblePrimitive.private.h">
+      <Filter>ソース ファイル\prBoostEnsemblePrimitive</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="NR2.0ANSI_v2.06_double\C_others\f64_nr.h">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClInclude>
+    <ClInclude Include="NR2.0ANSI_v2.06_double\C_others\f64_nrutil.h">
+      <Filter>NR2.0ANSI_f64</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prIsomap.private.h">
+      <Filter>ソース ファイル\prIsomap</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prIsomap.h">
+      <Filter>ソース ファイル\prIsomap</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LibPR\prBoostEnsemblePrimitiveMT.h">
+      <Filter>ソース ファイル\prBoostEnsemblePrimitive</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
