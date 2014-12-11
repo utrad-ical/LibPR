@@ -553,13 +553,10 @@ int PR_ReguralizeCostBoost(PR_CASELIST* caseList)
 
 int PR_CalcOutputBoostEnsembleForCand(PR_ENSEMBLE* ensemble, PR_CANDDATA* candData)
 {
-	if(candData==NULL || ensemble==NULL)	return PR_AVEND;
-	
-	if(candData->rootCaseData==NULL)	return PR_AVEND;
+	if(candData==NULL || ensemble==NULL)								return PR_AVEND;
+	if(candData->rootCaseData==NULL)									return PR_AVEND;
 	if(((PR_CASEDATA*)(candData->rootCaseData))->rootCaseList==NULL)	return PR_AVEND;
-
 	if(ensemble->codeEnsembleType!=PR_ENSEMBLETYPE_DISCRETEADABOOST)	return PR_AVEND;
-
 	
 	int res;
 	unsigned int nfeat, targetFeat;
@@ -571,26 +568,24 @@ int PR_CalcOutputBoostEnsembleForCand(PR_ENSEMBLE* ensemble, PR_CANDDATA* candDa
 	current = ensemble->firstNode;
 	PR_BOOSTWEAKCLASSIFIERPARAMS* param = ((PR_BOOSTWEAKCLASSIFIERPARAMS*)(ensemble->firstNode->data));
 
-	for(nfeat=0; nfeat<ensemble->numNode; nfeat++)
-	{
+	for(nfeat=0; nfeat<ensemble->numNode; nfeat++) {
 		param = (PR_BOOSTWEAKCLASSIFIERPARAMS*)(current->data);
-
 		res = PR_CheckIfFeatTagIsMemberOfFeatTagTable(param->featureTag, root->featTagTable, &targetFeat);
 		if(res==PR_AVEND)	return PR_AVEND;
-
 		fvalue = candData->featValues[targetFeat];
 
-		if(param->mode==-1)
-		{
-			if(fvalue<=param->threshold)	sumOutput += param->nodeWeight;
-			else							sumOutput -= param->nodeWeight;
+		if(ensemble->numNode==1) {
+			sumOutput = (double)(fvalue-param->threshold);
+			if(param->mode==-1)		sumOutput *= -1.0;
+		} else {
+			if(param->mode==-1) {
+				if(fvalue<=param->threshold)	sumOutput += param->nodeWeight;
+				else							sumOutput -= param->nodeWeight;
+			} else {
+				if(fvalue>=param->threshold)	sumOutput += param->nodeWeight;
+				else							sumOutput -= param->nodeWeight;
+			}
 		}
-		else
-		{
-			if(fvalue>=param->threshold)	sumOutput += param->nodeWeight;
-			else							sumOutput -= param->nodeWeight;
-		}
-
 		current = current->next;
 	}
 
