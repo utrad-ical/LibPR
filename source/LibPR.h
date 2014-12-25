@@ -45,6 +45,7 @@
 #include "./LibPR/prTableInputFile.h"
 #include "./LibPR/prUBoost.h"
 #include "./LibPR/prUBoostMT.h"
+#include "./LibPR/prUBoostMT2.h"
 
 
 //#include "../NR2.0ANSI_v2.06_double/f64_nr_functions.h"

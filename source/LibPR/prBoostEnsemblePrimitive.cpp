@@ -447,15 +447,15 @@ int PR_InitializeCostBoost(PR_CASELIST* caseList, int mode)
 
 	PR_CountNumCandsForCaseList(caseList);
 	
-	double* intCostValue = new double [2];
+	float* intCostValue = new float [2];
 	if(mode==1)
 	{
 		intCostValue[0] = intCostValue[1] = 1.0;
 	}
 	else
 	{
-		intCostValue[0] = 0.5/(double)caseList->totalNumCandOfClass[0];
-		intCostValue[1] = 0.5/(double)(caseList->totalNumCand-caseList->totalNumCandOfClass[0]);
+		intCostValue[0] = (float)(0.5/(double)caseList->totalNumCandOfClass[0]);
+		intCostValue[1] = (float)(0.5/(double)(caseList->totalNumCand-caseList->totalNumCandOfClass[0]));
 	}
 	
 	PR_CASEDATA* currentCase = caseList->childNodeFirstCase;

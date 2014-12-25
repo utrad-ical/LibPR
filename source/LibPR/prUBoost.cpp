@@ -458,7 +458,7 @@ int PR_IncludeCostInDataWeightForBoost(PR_CANDDATAARRAY* ary)
 double PR_NormalizeDataWeightForBoost(PR_CANDDATAARRAY* ary)
 {
 	unsigned long nCand = ary->num;
-	double sumWeight=0.0;
+	float sumWeight=0.0f;
 
 	for(unsigned long i=0; i<nCand; i++)
 		sumWeight += ((PR_BOOSTOPTION*)(ary->cands[i]->optionParam))->dataWeight;
@@ -466,7 +466,7 @@ double PR_NormalizeDataWeightForBoost(PR_CANDDATAARRAY* ary)
 	if(sumWeight==1.0)	return sumWeight;
 
 	for(unsigned long i=0; i<nCand; i++)
-		((PR_BOOSTOPTION*)(ary->cands[i]->optionParam))->dataWeight /= sumWeight;
+		((PR_BOOSTOPTION*)(ary->cands[i]->optionParam))->dataWeight /= (float)sumWeight;
 
 	return sumWeight;
 }
@@ -475,7 +475,7 @@ int PR_CostSensitiveNormalizeDataWeightBoost(PR_CANDDATAARRAY* ary)
 {
 	unsigned long i, nCand = ary->num;
 	PR_BOOSTOPTION* boostOption;
-	double sumWeight=0.0;
+	float sumWeight=0.0f;
 
 	for(i=0; i<nCand; i++)
 	{
@@ -1000,22 +1000,22 @@ PR_UpdateDataWeight(
 		switch(channelBoost)
 		{
 		case 10: // PR_CHANNEL_ADABOOST:
-			option->dataWeight = exp(z);
+			option->dataWeight = (float)exp(z);
 			break;
 		case 11: // PR_CHANNEL_MADABOOST:
-			if(z>=0.0)		option->dataWeight = 1.0;
-			else			option->dataWeight = exp(2.0*z);
+			if(z>=0.0)		option->dataWeight = 1.0f;
+			else			option->dataWeight = (float)exp(2.0*z);
 			break;
 		case 12: // PR_CHANNEL_LOGITBOOST:
 			z2Exp = exp(2.0*z);
-			option->dataWeight = 2.0*z2Exp/(1.0+z2Exp);
+			option->dataWeight = (float)(2.0*z2Exp/(1.0+z2Exp));
 			break;
 		case 13: // PR_CHANNEL_ETABOOST:
-			option->dataWeight = (1.0-eta)*exp(z)+eta;
+			option->dataWeight = (float)((1.0-eta)*exp(z)+eta);
 			break;
 		case 14: // PR_CHANNEL_ROBUSTETABOOST:
-			if(z>=0.0)		option->dataWeight = 1.0;
-			else			option->dataWeight = ((1.0-eta)*exp(z)+eta)/((1.0-eta)*exp(-z)+eta);
+			if(z>=0.0)		option->dataWeight = 1.0f;
+			else			option->dataWeight = (float)(((1.0-eta)*exp(z)+eta)/((1.0-eta)*exp(-z)+eta));
 			break;
 		default:
 			fprintf(stderr,"error boostChannel=%d\n",channelBoost);

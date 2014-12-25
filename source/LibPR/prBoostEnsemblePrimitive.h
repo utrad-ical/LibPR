@@ -50,8 +50,8 @@ int PR_CopyBoostWeakClassifierParams(PR_BOOSTWEAKCLASSIFIERPARAMS* dest, PR_BOOS
 
 typedef struct _PR_BOOSTOPTION
 {
-	double dataWeight;
-	double cost;
+	float dataWeight;
+	float cost;
 //	double onProcCost;
 }
 PR_BOOSTOPTION;
