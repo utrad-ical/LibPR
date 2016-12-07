@@ -147,10 +147,10 @@ float* PR_GetContributionRatioPCA(PR_DATASETPRINCIPALCOMPONENT* dataPCA, unsigne
 	double sumEigenValue = 0.0;
 
 	for(unsigned int i=0; i<numFeature; i++)
-		sumEigenValue += abs((double)dataPCA->data[targetClass]->eigenValues[i]);
+		sumEigenValue += fabs((double)dataPCA->data[targetClass]->eigenValues[i]);
 
 	for(unsigned int i=0; i<numFeature; i++)
-		contRatio[i] = (float)(abs((double)dataPCA->data[targetClass]->eigenValues[i])/sumEigenValue);
+		contRatio[i] = (float)(fabs((double)dataPCA->data[targetClass]->eigenValues[i])/sumEigenValue);
 
 	return contRatio;
 }
@@ -164,11 +164,11 @@ PR_GetDimensionForCumulativeContributionRatioThresholdPCA(
 	double sum=0.0,	cumulation=0.0;
 
 	for(i=0; i<num; i++)
-		sum += abs((double)dataPCA->data[targetClass]->eigenValues[i]);
+		sum += fabs((double)dataPCA->data[targetClass]->eigenValues[i]);
 
 	for(i=0; i<num; i++)
 	{
-		cumulation += abs((double)dataPCA->data[targetClass]->eigenValues[i])/sum;
+		cumulation += fabs((double)dataPCA->data[targetClass]->eigenValues[i])/sum;
 		if(cumulation>threshold)	break;
 	}
 

@@ -1,7 +1,7 @@
 
+#include <float.h>
 #include "./prUBoost.h"
 #include "./prUBoost.private.h"
-
 
 
 PR_ENSEMBLE* PR_SimpleAdaBoost(PR_CASELIST* caseList, unsigned int numClassifier)
@@ -597,7 +597,7 @@ int PR_ThresholdingOptimizationByWeightedDataBoost(
 		}
 	}
 
-	if(abs(optErr)<minweight/10.0)	optErr = minweight/10.0;
+	if(fabs(optErr)<minweight/10.0)	optErr = minweight/10.0;
 
 	delete [] featAry;
 	delete [] weightAry;
@@ -867,7 +867,7 @@ PR_GetWeightOfWeakClassifier(
 		params->outWeakModel = NULL;
 
 	alpha = 0.5*log((1.0-error)/error);
-	double min=DBL_MIN, max=alpha*2.0;
+	double vmin=DBL_MIN, vmax=alpha*2.0;
 
 	switch(channelBoost)
 	{
@@ -877,25 +877,25 @@ PR_GetWeightOfWeakClassifier(
 		break;
 	case PR_CHANNEL_MADABOOST:
 //		printf("    Fmada(%.3e)=%le..",alpha,PR_OutputSumOfLossMadaBoost(alpha,aryCand));
-		PR_BrentMethodGetArgMinForFunction(min,alpha,max,PR_OutputSumOfLossMadaBoost,params,
+		PR_BrentMethodGetArgMinForFunction(vmin,alpha,vmax,PR_OutputSumOfLossMadaBoost,params,
 										   numIteration,&weakClassifier->nodeWeight);
 //		printf(" Fmada(%.3e)=%le\n",weakClassifier->nodeWeight,PR_OutputSumOfLossMadaBoost(weakClassifier->nodeWeight,aryCand));
 		break;
 	case PR_CHANNEL_LOGITBOOST:
 //		printf("    Flog(%.3e)=%le..",alpha,PR_OutputSumOfLossLogitBoost(alpha,aryCand));
-		PR_BrentMethodGetArgMinForFunction(min,alpha,max,PR_OutputSumOfLossLogitBoost,params,
+		PR_BrentMethodGetArgMinForFunction(vmin,alpha,vmax,PR_OutputSumOfLossLogitBoost,params,
 										   numIteration,&weakClassifier->nodeWeight);
 //		printf(" Flog(%.3e)=%le\n",weakClassifier->nodeWeight,PR_OutputSumOfLossLogitBoost(weakClassifier->nodeWeight,aryCand));
 		break;
 	case PR_CHANNEL_ETABOOST:
 //		printf("    Feta(%.3e)=%le..",alpha,PR_OutputSumOfLossEtaBoost(alpha,aryCand));
-		PR_BrentMethodGetArgMinForFunction(min,alpha,max,PR_OutputSumOfLossEtaBoost,params,
+		PR_BrentMethodGetArgMinForFunction(vmin,alpha,vmax,PR_OutputSumOfLossEtaBoost,params,
 										   numIteration,&weakClassifier->nodeWeight);
 //		printf(" Feta(%.3e)=%le\n",weakClassifier->nodeWeight,PR_OutputSumOfLossEtaBoost(weakClassifier->nodeWeight,aryCand));
 		break;
 	case PR_CHANNEL_ROBUSTETABOOST:
 //		printf("    Freta(%.3e)=%le..",alpha,PR_OutputSumOfLossMostBRobustEtaBoost(alpha,aryCand));
-		PR_BrentMethodGetArgMinForFunction(min,alpha,max,PR_OutputSumOfLossMostBRobustEtaBoost,params,
+		PR_BrentMethodGetArgMinForFunction(vmin,alpha,vmax,PR_OutputSumOfLossMostBRobustEtaBoost,params,
 										   numIteration,&weakClassifier->nodeWeight);
 //		printf(" Freta(%.3e)=%le\n",weakClassifier->nodeWeight,PR_OutputSumOfLossMostBRobustEtaBoost(weakClassifier->nodeWeight,aryCand));
 		break;

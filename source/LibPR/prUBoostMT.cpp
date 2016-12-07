@@ -1,5 +1,7 @@
 
 #include <iostream>
+#include <float.h>
+#include <limits.h>
 #include <pthread.h>
 #include "./prUBoost.private.h"
 #include "../LibPR.h"
